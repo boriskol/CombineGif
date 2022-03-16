@@ -58,18 +58,19 @@ class ApiLoader {
       return request
    }
    
-   public func fetchAPI<T: Codable>(urlParams: [String:String], gifacces: String?) -> AnyPublisher<T, Error> {
+   public func fetchAPI<T: Codable>(urlParams: [String:String], gifacces: String?) -> AnyPublisher<T, APIError> {
      return fetchAndDecode(url: createUrl(urlParams: urlParams, gifacces: gifacces).url!)
    }
    
-   private func fetchAndDecode<T: Codable>(url: URL) -> AnyPublisher<T, Error> {
+   private func fetchAndDecode<T: Codable>(url: URL) -> AnyPublisher<T, APIError> {
            return URLSession.shared.dataTaskPublisher(for: url)
-               //.mapError{ _ in APIError.serverError }
+               .mapError{ _ in APIError.serverError }
                .subscribe(on: DispatchQueue.global(qos: .background))
                .receive(on: DispatchQueue.main)
                .tryMap { $0.data }
                .decode(type: T.self, decoder: JSONDecoder())
-               //.mapError { _ in APIError.parsingError }
+               .mapError { _ in APIError.parsingError }
+               //.replaceError(with: )
                .eraseToAnyPublisher()
       
    }

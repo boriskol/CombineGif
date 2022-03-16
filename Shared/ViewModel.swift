@@ -58,7 +58,7 @@ class ViewModel: ObservableObject {
    
    func loadGift() {
       
-      let aa: AnyPublisher<APIListResponse, Error> = appiCall.fetchAPI(urlParams: [Constants.rating: Constants.rating, Constants.limit: Constants.limitNum], gifacces: Constants.trending)
+      let aa: AnyPublisher<APIListResponse, APIError> = appiCall.fetchAPI(urlParams: [Constants.rating: Constants.rating, Constants.limit: Constants.limitNum], gifacces: Constants.trending)
       
       aa.sink(
          receiveCompletion: { [weak self] completion in
