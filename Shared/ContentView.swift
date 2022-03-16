@@ -34,11 +34,17 @@ struct ContentView: View {
                Section(header: VStack(alignment: .leading, spacing: 8){
                   Text("Gifs Trading").font(.body).foregroundColor(.purple).fontWeight(.bold).padding(.leading)
                }, content: {
-                  List{
-                     ForEach(self.gifs.gifs, id: \.id) { gif in
-                        GifCell(gif: gif, geometry: geometry)
+                  if self.gifs.error{
+                     VStack{
+                        Text("Error")
                      }
-                  }.listStyle(.plain)
+                  }else{
+                     List{
+                        ForEach(self.gifs.gifs, id: \.id) { gif in
+                           GifCell(gif: gif, geometry: geometry)
+                        }
+                     }.listStyle(.plain)
+                  }
                })
             })
                .task{

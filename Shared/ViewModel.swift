@@ -25,6 +25,7 @@ import UIKit
 class ViewModel: ObservableObject {
    
    @Published var gifs = [GifCollectionViewCellViewModel]()
+   @Published var error: Bool = false
    // MARK:  Initializer Dependency injestion
    let appiCall: ApiLoader
    
@@ -59,7 +60,7 @@ class ViewModel: ObservableObject {
    func loadGift() {
       
       let aa: AnyPublisher<APIListResponse, APIError> = appiCall.fetchAPI(urlParams: [Constants.rating: Constants.rating, Constants.limit: Constants.limitNum], gifacces: Constants.trending)
-      
+
       aa.sink(
          receiveCompletion: { [weak self] completion in
             switch completion {
@@ -68,7 +69,7 @@ class ViewModel: ObservableObject {
                break
             case .failure(let error):
                debugPrint("error geting gifs \(error)")
-               self?.gifs = []
+               self?.error = true
             }
          },
          receiveValue: { [weak self] g in

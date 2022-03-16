@@ -65,13 +65,20 @@ class ApiLoader {
    private func fetchAndDecode<T: Codable>(url: URL) -> AnyPublisher<T, APIError> {
            return URLSession.shared.dataTaskPublisher(for: url)
                .subscribe(on: DispatchQueue.global(qos: .background))
-               .receive(on: DispatchQueue.main)
+               //.debounce(for: 0.005, scheduler: RunLoop.main)
                .mapError{ _ in APIError.serverError }
-               .tryMap { $0.data }
+               //.map { $0.data }
+               .tryMap{$0.data}
                .decode(type: T.self, decoder: JSONDecoder())
+               /*.catch({_ in
+                  return Just(T.self as! T)
+               })*/
+               .receive(on: DispatchQueue.main)
+               //.receive(on: RunLoop.main)
                .mapError { _ in APIError.parsingError }
                //.replaceError(with: )
                .eraseToAnyPublisher()
+               
       
    }
    
@@ -79,3 +86,8 @@ class ApiLoader {
       debugPrint("ApiLoader deinit")
    }
 }
+/*
+ RunLoop
+
+ To better understand why the above image is not updating during scrolling, it’s good to understand what’s happening when you start scrolling. The RunLoop.main uses several modes and switches to a non-default mode when user interaction occurs. However, RunLoop.main as a Combine scheduler only executes when the default mode is active. In other words, the mode is switched back to default when user interaction ends and the Combine closure executes.
+ */
