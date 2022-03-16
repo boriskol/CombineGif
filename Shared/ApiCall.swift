@@ -64,9 +64,9 @@ class ApiLoader {
    
    private func fetchAndDecode<T: Codable>(url: URL) -> AnyPublisher<T, APIError> {
            return URLSession.shared.dataTaskPublisher(for: url)
-               .mapError{ _ in APIError.serverError }
                .subscribe(on: DispatchQueue.global(qos: .background))
                .receive(on: DispatchQueue.main)
+               .mapError{ _ in APIError.serverError }
                .tryMap { $0.data }
                .decode(type: T.self, decoder: JSONDecoder())
                .mapError { _ in APIError.parsingError }
