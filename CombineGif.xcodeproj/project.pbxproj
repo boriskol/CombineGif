@@ -13,10 +13,20 @@
 		2C7B2B2227DF98470038A2E9 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2B2127DF98470038A2E9 /* Tests_macOSLaunchTests.swift */; };
 		2C7B2B2327DF98470038A2E9 /* CombineGifApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2AFB27DF98460038A2E9 /* CombineGifApp.swift */; };
 		2C7B2B2427DF98470038A2E9 /* CombineGifApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2AFB27DF98460038A2E9 /* CombineGifApp.swift */; };
-		2C7B2B2527DF98470038A2E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2AFC27DF98460038A2E9 /* ContentView.swift */; };
-		2C7B2B2627DF98470038A2E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2AFC27DF98460038A2E9 /* ContentView.swift */; };
 		2C7B2B2727DF98470038A2E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B2AFD27DF98470038A2E9 /* Assets.xcassets */; };
 		2C7B2B2827DF98470038A2E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B2AFD27DF98470038A2E9 /* Assets.xcassets */; };
+		2C7B2B3D27DF98810038A2E9 /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2B3727DF98810038A2E9 /* GifCell.swift */; };
+		2C7B2B3E27DF98810038A2E9 /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2B3727DF98810038A2E9 /* GifCell.swift */; };
+		2C7B2B3F27DF98810038A2E9 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2B3827DF98810038A2E9 /* ApiCall.swift */; };
+		2C7B2B4027DF98810038A2E9 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2B3827DF98810038A2E9 /* ApiCall.swift */; };
+		2C7B2B4127DF98810038A2E9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2B3927DF98810038A2E9 /* Models.swift */; };
+		2C7B2B4227DF98810038A2E9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2B3927DF98810038A2E9 /* Models.swift */; };
+		2C7B2B4327DF98810038A2E9 /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2B3A27DF98810038A2E9 /* CacheAsyncImage.swift */; };
+		2C7B2B4427DF98810038A2E9 /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2B3A27DF98810038A2E9 /* CacheAsyncImage.swift */; };
+		2C7B2B4527DF98810038A2E9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2B3B27DF98810038A2E9 /* ViewModel.swift */; };
+		2C7B2B4627DF98810038A2E9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2B3B27DF98810038A2E9 /* ViewModel.swift */; };
+		2C7B2B4727DF98810038A2E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2B3C27DF98810038A2E9 /* ContentView.swift */; };
+		2C7B2B4827DF98810038A2E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B2B3C27DF98810038A2E9 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +48,6 @@
 
 /* Begin PBXFileReference section */
 		2C7B2AFB27DF98460038A2E9 /* CombineGifApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineGifApp.swift; sourceTree = "<group>"; };
-		2C7B2AFC27DF98460038A2E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2C7B2AFD27DF98470038A2E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C7B2B0227DF98470038A2E9 /* CombineGif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineGif.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7B2B0827DF98470038A2E9 /* CombineGif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineGif.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +58,12 @@
 		2C7B2B1B27DF98470038A2E9 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7B2B1F27DF98470038A2E9 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		2C7B2B2127DF98470038A2E9 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		2C7B2B3727DF98810038A2E9 /* GifCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCell.swift; sourceTree = "<group>"; };
+		2C7B2B3827DF98810038A2E9 /* ApiCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
+		2C7B2B3927DF98810038A2E9 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		2C7B2B3A27DF98810038A2E9 /* CacheAsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
+		2C7B2B3B27DF98810038A2E9 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		2C7B2B3C27DF98810038A2E9 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +113,13 @@
 			isa = PBXGroup;
 			children = (
 				2C7B2AFB27DF98460038A2E9 /* CombineGifApp.swift */,
-				2C7B2AFC27DF98460038A2E9 /* ContentView.swift */,
+				2C7B2B3C27DF98810038A2E9 /* ContentView.swift */,
 				2C7B2AFD27DF98470038A2E9 /* Assets.xcassets */,
+				2C7B2B3827DF98810038A2E9 /* ApiCall.swift */,
+				2C7B2B3A27DF98810038A2E9 /* CacheAsyncImage.swift */,
+				2C7B2B3727DF98810038A2E9 /* GifCell.swift */,
+				2C7B2B3927DF98810038A2E9 /* Models.swift */,
+				2C7B2B3B27DF98810038A2E9 /* ViewModel.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -222,7 +242,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					2C7B2B0127DF98470038A2E9 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -299,8 +319,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C7B2B2527DF98470038A2E9 /* ContentView.swift in Sources */,
+				2C7B2B3D27DF98810038A2E9 /* GifCell.swift in Sources */,
+				2C7B2B4327DF98810038A2E9 /* CacheAsyncImage.swift in Sources */,
+				2C7B2B4727DF98810038A2E9 /* ContentView.swift in Sources */,
+				2C7B2B3F27DF98810038A2E9 /* ApiCall.swift in Sources */,
 				2C7B2B2327DF98470038A2E9 /* CombineGifApp.swift in Sources */,
+				2C7B2B4527DF98810038A2E9 /* ViewModel.swift in Sources */,
+				2C7B2B4127DF98810038A2E9 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,8 +333,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C7B2B2627DF98470038A2E9 /* ContentView.swift in Sources */,
+				2C7B2B3E27DF98810038A2E9 /* GifCell.swift in Sources */,
+				2C7B2B4427DF98810038A2E9 /* CacheAsyncImage.swift in Sources */,
+				2C7B2B4827DF98810038A2E9 /* ContentView.swift in Sources */,
+				2C7B2B4027DF98810038A2E9 /* ApiCall.swift in Sources */,
 				2C7B2B2427DF98470038A2E9 /* CombineGifApp.swift in Sources */,
+				2C7B2B4627DF98810038A2E9 /* ViewModel.swift in Sources */,
+				2C7B2B4227DF98810038A2E9 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +555,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -553,6 +584,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
