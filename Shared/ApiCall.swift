@@ -68,7 +68,8 @@ class ApiLoader {
                //.debounce(for: 0.005, scheduler: RunLoop.main)
                .mapError{ _ in APIError.serverError }
                //.map { $0.data }
-               .tryMap{$0.data}
+               //.tryMap{$0.data}
+               .map(\.data)
                .decode(type: T.self, decoder: JSONDecoder())
                /*.catch({_ in
                   return Just(T.self as! T)
