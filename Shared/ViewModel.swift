@@ -29,7 +29,8 @@ class ViewModel: ObservableObject {
    // MARK:  Initializer Dependency injestion
    let appiCall: ApiLoader
    
-   var publishers = [AnyCancellable]()
+   //private var publishers = [AnyCancellable]()
+   private var publishers = Set<AnyCancellable>()
    
    init(appiCall: ApiLoader = ApiLoader()){
       self.appiCall = appiCall
@@ -59,9 +60,9 @@ class ViewModel: ObservableObject {
    
    func loadGift() {
       
-      let aa: AnyPublisher<APIListResponse, APIError> = appiCall.fetchAPI(urlParams: [Constants.rating: Constants.rating, Constants.limit: Constants.limitNum], gifacces: Constants.trending)
+      let loadGifts: AnyPublisher<APIListResponse, APIError> = appiCall.fetchAPI(urlParams: [Constants.rating: Constants.rating, Constants.limit: Constants.limitNum], gifacces: Constants.trending)
 
-      aa.sink(
+      loadGifts.sink(
          receiveCompletion: { [weak self] completion in
             switch completion {
             case .finished:
